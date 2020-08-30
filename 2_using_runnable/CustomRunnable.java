@@ -2,15 +2,9 @@
 
 public class CustomThread implements Runnable {
 
-    private Thread t;
     private long delay;
 
-    public Thread getThread() {
-        return t;
-    }
-
     public CustomThread(long delay) {
-        t = new Thread(this);
         this.delay = delay;
     }
 

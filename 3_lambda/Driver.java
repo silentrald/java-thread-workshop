@@ -3,6 +3,7 @@
 public class Driver {
 
     public static void main(String[] args) {
+        // We can use a lambda expression to declare the run() function
         Thread t = new Thread(() -> {
             try {
                 Thread.sleep(1000);

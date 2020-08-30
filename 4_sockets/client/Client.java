@@ -16,6 +16,8 @@ public class Client {
             DataInputStream reader = new DataInputStream(endpoint.getInputStream());
             // DataOutputStream writer = new DataOutputStream(endpoint.getOutputStream());
 
+            // Check if the message read is not equal to "END"
+            // so we can print what the server said
             while (!(msg = reader.readUTF()).equals("END")) {
                 System.out.println("Server said " + msg);
             }
