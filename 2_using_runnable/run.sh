@@ -1,3 +1,0 @@
-javac *.java
-
-java Driver
