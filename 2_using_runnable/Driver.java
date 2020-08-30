@@ -10,11 +10,11 @@ public class Driver {
         Thread t2 = new Thread(new CustomThread("Hello in 0.5s", 500));
         
         try {
-            ct1.start();
-            ct2.start();
+            t1.start();
+            t2.start();
 
-            ct1.join();
-            ct2.join();
+            t1.join();
+            t2.join();
         } catch (Exception e) {
             e.printStackTrace();
         }
