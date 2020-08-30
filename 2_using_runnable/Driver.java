@@ -13,8 +13,8 @@ public class Driver {
             ct1.start();
             ct2.start();
 
-            ct1.getThread().join();
-            ct2.getThread().join();
+            ct1.join();
+            ct2.join();
         } catch (Exception e) {
             e.printStackTrace();
         }
