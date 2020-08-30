@@ -3,9 +3,10 @@
 public class Driver {
 
     public static void main(String[] args) {
-        CustomThread ct1 = new CustomThread("Hello in 2s", 2000);
-        CustomThread ct2 = new CustomThread("Hello in 0.5s", 500);
+        Thread ct2 = new CustomThread(2000);
+        Thread ct1 = new CustomThread(1000);
 
+        // This will start the thread
         ct1.start();
         ct2.start();
 
