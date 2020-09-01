@@ -1,2 +1,6 @@
-# Java_Thread_Workshop
-This repo will teach you the basics of threads. Some socket programming will also be implemented.
+# Java Thread Workshop
+This repository will teach you the basics of threads.
+
+In programming, we are used to reading code from top to bottom -- a single process program. But in our generation, our processors can handle many processes at any point in time. To use this we have the concept of parallel processing. We can utilize this in Java by using the Thread Class and make a separate process that will run simultaneously with the main thread.
+
+Sources: [Threads and Multiprocessing](http://math.hws.edu/javanotes/c12/index.html?fbclid=IwAR1UrpLxIQNYC2RAkuEbWrTw-9DK_9GogvS1oSXIyUVovzfklwCOBwVEfv8)

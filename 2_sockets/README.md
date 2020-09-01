@@ -1,0 +1,4 @@
+# Threads and Sockets
+
+Multithreading is helpful when it comes to networking. When multiple users wants to connect to the server, a single process could not handle this. We need to make Threads so that we can accomodate every user that will connect to the server. In concept, when a user wants to make a connection, we feed it to a Socket and the Socket will be placed into a Thread which will handle everything that happens to the connection, and the main thread just keeps listening to users connecting.
+In the `Server.java` file, you can see that when it gets a connection from the `ServerSocket` Object, it makes a Thread Object (which in the code I used `Connection`) and that handles the connection like the DataInputStream and DataOutStream of the Socket Object. Then when the the Thread is created the server will loop back to listening, waiting for another user to connect and the process will repeat until the server is closed.
