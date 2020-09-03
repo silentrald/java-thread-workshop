@@ -12,20 +12,16 @@ public class Connection extends Thread {
     @Override
     public void run() {
         try {
-            int ctr = 0;
-
-            // DataInputStream reader = new DataInputStream(s.getInputStream());
+            String msg;
+            DataInputStream reader = new DataInputStream(s.getInputStream());
             DataOutputStream writer = new DataOutputStream(s.getOutputStream());
-
-            // Send the Client 10 Hello messages
-            while (ctr < 10) {
-                Thread.sleep(1000);
-                ctr++;
-                System.out.println("Server: Sending Hello " + ctr + " to Client " + s.getRemoteSocketAddress());
-                writer.writeUTF("Hello " + ctr);
+            
+            // This checks whether the string that was sent from
+            // the client side is the terminal "END" else we
+            // send the string back to the client
+            while (!(msg = reader.readUTF()).equals("END")) {
+                writer.writeUTF("Server: " + msg);
             }
-            // Give the terminal value to the client
-            writer.writeUTF("END");
 
             s.close();
         } catch (Exception e) {
